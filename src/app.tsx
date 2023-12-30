@@ -1,4 +1,4 @@
-import { TodosContextProvider } from '~/contexts/todo-context'
+import { TodoContextProvider } from '~/contexts/todo-context'
 import { TodoCreate } from '~/components/todo-create'
 import { TodoList } from '~/components/todo-list'
 
@@ -17,9 +17,9 @@ const defaultTodos = [
 
 export function App() {
   return (
-    <TodosContextProvider {...{ defaultTodos }}>
+    <TodoContextProvider {...{ defaultTodos }}>
       <TodoCreate />
       <TodoList />
-    </TodosContextProvider>
+    </TodoContextProvider>
   )
 }
