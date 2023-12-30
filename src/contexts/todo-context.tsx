@@ -22,11 +22,11 @@ type TodoContext = {
 export const TodoContext = createContext<TodoContext | null>(null)
 
 type TodoContextProviderProps = React.PropsWithChildren<{
-  defaultTodos?: Todo[]
+  defaultTodo?: Todo[]
 }>
 
-export function TodoContextProvider({ defaultTodos, children }: TodoContextProviderProps) {
-  const [state, dispatch] = useReducer(todosReducer, defaultTodos ?? [])
+export function TodoContextProvider({ defaultTodo, children }: TodoContextProviderProps) {
+  const [state, dispatch] = useReducer(todosReducer, defaultTodo ?? [])
 
   return <TodoContext.Provider value={{ state, dispatch }}>{children}</TodoContext.Provider>
 }

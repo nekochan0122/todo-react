@@ -18,9 +18,9 @@ export function TodoCreate() {
   }
 
   return (
-    <div>
+    <>
       <input ref={inputRef} type='text' />
       <button onClick={createTodo}>Create</button>
-    </div>
+    </>
   )
 }
