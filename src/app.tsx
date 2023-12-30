@@ -1,5 +1,5 @@
-import { TodosContextProvider } from './contexts/todo-context'
-import { TodoCreate } from './components/todo-create'
+import { TodosContextProvider } from '~/contexts/todo-context'
+import { TodoCreate } from '~/components/todo-create'
 import { TodoList } from '~/components/todo-list'
 
 const defaultTodos = [
