@@ -7,7 +7,8 @@ export function TodoCreate() {
 
   const { dispatch } = useTodoContext()
 
-  function createTodo() {
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
     if (!inputRef.current) return
 
     const text = inputRef.current.value || ''
@@ -18,9 +19,9 @@ export function TodoCreate() {
   }
 
   return (
-    <>
+    <form onSubmit={onSubmit}>
       <input ref={inputRef} type='text' />
-      <button onClick={createTodo}>Create</button>
-    </>
+      <button type='submit'>add</button>
+    </form>
   )
 }
